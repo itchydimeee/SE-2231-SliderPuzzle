@@ -11,6 +11,6 @@
     "typescript": "^5.4.2"
   },
   "scripts": {
-    "start": "npx ts-node ./src/index.ts"
+    "start": "npx ts-node ./src/index.ts puzzle4x4-unsolvable.txt"
   }
 }

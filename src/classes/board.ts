@@ -1,6 +1,5 @@
 class Board {
-  // create a board from an n-by-n array of tiles,
-  // where tiles[row][col] = tile at (row, col)
+
   private tiles: number[][]
   private n: number
 
@@ -9,7 +8,6 @@ class Board {
     this.tiles = tiles.map(row => [...row])
   }
 
-  // string representation of this board
   toString (): string {
     let str = `${this.n}\n`
     for (const row of this.tiles) {
@@ -18,9 +16,7 @@ class Board {
     return str.trim()
   }
 
-  // board dimension n
   dimension (): number {
-    // PLS MODIFY
     return this.n
   }
 
