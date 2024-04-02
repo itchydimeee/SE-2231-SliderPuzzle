@@ -5,11 +5,6 @@ import path from 'path';
 
 const fileName: string = process.argv[2];
 
-if (!fileName) {
-  console.error('Please provide a puzzle file name as a command-line argument.');
-  process.exit(1);
-}
-
 const puzzlesDir = path.join(__dirname, '..', 'puzzles');
 const filePath = path.join(puzzlesDir, fileName);
 
@@ -41,7 +36,7 @@ try {
   const solver: Solver = new Solver(initial);
 
   // print solution to standard output
-  if (!solver.getIsSolvable()) {
+  if (!solver.isSolvable()) {
     console.log("No solution possible");
   } else {
     console.log("Minimum number of moves = " + solver.moves());

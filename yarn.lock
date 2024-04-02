@@ -28,7 +28,7 @@ data-structure-typed@^1.52.0:
 
 min-heap-typed@^1.52.0:
   version "1.52.0"
-  resolved "https://registry.npmjs.org/min-heap-typed/-/min-heap-typed-1.52.0.tgz"
+  resolved "https://registry.yarnpkg.com/min-heap-typed/-/min-heap-typed-1.52.0.tgz#0a892b39a532510e1a7cfdcad728bdc70c04f51e"
   integrity sha512-H8YcAoiZE97rn+r0J2RXPOx86P9trQ9scN5lJagovke3xG5d2hf1rQOfTk+c8uKbOhHR2j/vwsDa71TXMElSrw==
   dependencies:
     data-structure-typed "^1.52.0"
