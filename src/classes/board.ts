@@ -1,6 +1,6 @@
 class Board {
 
-  private tiles: number[][]
+  tiles: number[][]
   private n: number
 
   constructor (tiles: number[][]) {
@@ -20,7 +20,6 @@ class Board {
     return this.n
   }
 
-  // number of tiles out of place
   hamming (): number {
     // PLS MODIFY
     let count = 0
@@ -35,7 +34,6 @@ class Board {
     return count
   }
 
-  // sum of Manhattan distances between tiles and goal
   manhattan (): number {
     // PLS MODIFY
     let distance = 0
@@ -52,7 +50,6 @@ class Board {
     return distance
   }
 
-  // is this board the goal board?
   isGoal (): boolean {
     // PLS MODIFY
     for (let i = 0; i < this.n; i++) {
@@ -66,7 +63,6 @@ class Board {
     return true
   }
 
-  // does this board equal y?
   equals (y: Board): boolean {
     if (this.n !== y.dimension()) {
       return false
@@ -81,7 +77,6 @@ class Board {
     return true
   }
 
-  // all neighboring boards
   neighbors (): Board[] {
     // PLS MODIFY
     const neighbors: Board[] = []
@@ -123,7 +118,6 @@ class Board {
     return neighbors
   }
 
-  // a board that is obtained by exchanging any pair of tiles
   twin (): Board {
     const newTiles = this.copyTiles()
     let swapped = false
@@ -145,7 +139,7 @@ class Board {
     return new Board(newTiles)
   }
 
-  private findBlankRow (): number {
+  findBlankRow (): number {
     for (let i = 0; i < this.n; i++) {
       for (let j = 0; j < this.n; j++) {
         if (this.tiles[i][j] === 0) {
@@ -156,7 +150,7 @@ class Board {
     throw new Error('Blank square not found')
   }
 
-  private findBlankCol (): number {
+  findBlankCol (): number {
     for (let i = 0; i < this.n; i++) {
       for (let j = 0; j < this.n; j++) {
         if (this.tiles[i][j] === 0) {
